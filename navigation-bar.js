@@ -1,8 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let show = document.getElementById("show-text");
+
+  function animateText(text, element) {
+    let index = 0;
+    let animationIntervale = setInterval(() => {
+      if (index >= text.length) {
+        clearInterval(animationIntervale);
+      } else {
+        element.innerHTML = text.substring(0, index + 1);
+        index++;
+      }
+    }, 100);
+  }
+
+  animateText("Desarrollador Web & Diseñador IU.");
+
   const content = {
     home: `
             <div class="main-section mb-5">
-              <h1>Desarrollador Web & Diseñador IU.</h1>
+              <h1 id="show"></h1>
               <p>Soy un  desarrollador y diseñador Full-Stack creativo, reconocido por mi habilidad para transformar ideas en experiencias digitales impactantes. Mi pasión por el desarrollo y el diseño web me permite combinar estética y funcionalidad para crear soluciones visuales y tecnológicas que conectan con las personas.</p>
               <button class="download-btn mt-3"><i class="fa fa-download"></i> Download CV</button>
             </div>
