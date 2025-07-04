@@ -27,6 +27,13 @@
         font-family: "Outfit", sans-serif;
         background-color: #f2f4f8;
       }
+      .btn-language {
+        border: none !important;
+      }
+      .btn-language:active {
+        border: none !important;
+        outline: none !important;
+      }
     </style>
   </head>
   <body>
@@ -35,30 +42,53 @@
       <div class="container d-flex justify-content-between align-items-center">
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img
-            src="https://i.imgur.com/JB2zPbf.png"
+          <!-- <img
+            src="assets/img/perfil.jpeg"
             alt="Logo"
             width="40"
             class="me-2"
-          />
-          <strong style="font-size: 20px">Arya Stark</strong>
+          /> -->
+          <strong style="font-size: 20px">J.Dev</strong>
         </a>
 
-        <!-- Menu Items -->
-        <div class="bg-white rounded-pill px-4 py-2 d-none d-lg-block">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
-            <li class="nav-item">
-              <a class="nav-link fw-bold active" href="#" id="nav-home">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="#" id="nav-about">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="#" id="nav-services"
-                >SERVICES</a
-              >
-            </li>
-          </ul>
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Language Switcher Dropdown -->
+          <div class="dropdown m-0">
+            <button
+              class="btn rounded-pill dropdown-toggle px-3 btn-language"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              EN
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="index-en.html"> English </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="index-es.html"> Español </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Menu Items -->
+          <div class="bg-white rounded-pill px-4 py-2 d-none d-lg-block">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" href="#" id="nav-home"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-muted" href="#" id="nav-about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-muted" href="#" id="nav-services"
+                  >SERVICES</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Mobile Toggle -->
@@ -86,7 +116,7 @@
             style="border-radius: 30px; padding-top: 40px"
           >
             <img
-              src="https://i.imgur.com/7vQD0fPs.jpg"
+              src="assets/img/perfil.jpeg"
               class="profile-pic mb-3"
               alt="Arya Stark"
               style="
@@ -97,7 +127,9 @@
                 margin-top: -100px;
               "
             />
-            <h4 style="font-weight: 700; font-size: 1.5rem">Arya Stark</h4>
+            <h4 style="font-weight: 700; font-size: 1.5rem">
+              Juan Manuel Osorio
+            </h4>
             <small class="text-white" style="letter-spacing: 1px"
               >FULL-STACK WEB DEVELOPER AND UI DESIGNERS</small
             >
@@ -143,9 +175,9 @@
 
           <div class="sidebar text-center">
             <div class="text-start mt-4">
-              <p><strong>PHONE:</strong><br />+(01) 5623 894 336</p>
-              <p><strong>EMAIL:</strong><br />hello@aryastark.com</p>
-              <p><strong>LOCATION:</strong><br />New York, USA</p>
+              <p><strong>PHONE:</strong><br />+(57) 310 695 0078</p>
+              <p><strong>EMAIL:</strong><br />shjuanmsh@gmail.com</p>
+              <p><strong>LOCATION:</strong><br />Colombia, Cundinamarca</p>
             </div>
             <div class="text-center">
               <button class="btn-hire mt-3">

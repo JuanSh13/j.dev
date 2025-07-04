@@ -1,11 +1,74 @@
 document.addEventListener("DOMContentLoaded", function () {
   const content = {
     home: `
-            <div class="main-section">
-              <p>Hi there! 👋</p>
-              <h1>Creative Web & UI Designer.</h1>
-              <p>I am a visionary creative designer, known for my ability to turn concepts into captivating visual narratives. My deep passion for the world of design allows me to craft compelling stories through my artistic ingenuity.</p>
+            <div class="main-section mb-5">
+              <h1>Desarrollador Web & Diseñador IU.</h1>
+              <p>Soy un  desarrollador y diseñador Full-Stack creativo, reconocido por mi habilidad para transformar ideas en experiencias digitales impactantes. Mi pasión por el desarrollo y el diseño web me permite combinar estética y funcionalidad para crear soluciones visuales y tecnológicas que conectan con las personas.</p>
               <button class="download-btn mt-3"><i class="fa fa-download"></i> Download CV</button>
+            </div>
+            <div class="row g-4">
+              <!-- Card 1 -->
+              <div class="col-md-5">
+                <div class="card shadow-sm rounded-4 border-0 h-100">
+                  <img
+                    src="https://via.placeholder.com/600x300"
+                    class="card-img-top rounded-top-4"
+                    alt="Project Image"
+                    style="object-fit: cover; height: 200px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Landing Page - Fitness App</h5>
+                    <div class="mb-3">
+                      <span class="badge bg-dark me-1">HTML</span>
+                      <span class="badge bg-dark me-1">CSS</span>
+                      <span class="badge bg-dark me-1">Bootstrap</span>
+                      <span class="badge bg-dark me-1">JavaScript</span>
+                    </div>
+                    <p class="card-text text-muted">
+                      Sitio web responsivo para una aplicación de fitness, con animaciones suaves, CTA claro y enfoque en experiencia de usuario.
+                    </p>
+                    <div class="d-flex justify-content-between mt-3">
+                      <a href="https://tusitio.com/proyecto" target="_blank" class="btn btn-outline-dark rounded-pill">
+                        <i class="fa fa-globe me-2"></i> Ver en línea
+                      </a>
+                      <a href="https://github.com/usuario/repositorio" target="_blank" class="btn btn-dark rounded-pill">
+                        <i class="fab fa-github me-2"></i> Código fuente
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-md-5">
+                <div class="card shadow-sm rounded-4 border-0 h-100">
+                  <img
+                    src="https://via.placeholder.com/600x300"
+                    class="card-img-top rounded-top-4"
+                    alt="Project Image"
+                    style="object-fit: cover; height: 200px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Dashboard de Administración</h5>
+                    <div class="mb-3">
+                      <span class="badge bg-dark me-1">React</span>
+                      <span class="badge bg-dark me-1">Tailwind</span>
+                      <span class="badge bg-dark me-1">Firebase</span>
+                    </div>
+                    <p class="card-text text-muted">
+                      Panel de control moderno con autenticación, gráficas y administración de usuarios en tiempo real.
+                    </p>
+                    <div class="d-flex justify-content-between mt-3">
+                      <a href="https://tusitio.com/dashboard" target="_blank" class="btn btn-outline-dark rounded-pill">
+                        <i class="fa fa-globe me-2"></i> Ver en línea
+                      </a>
+                      <a href="https://github.com/usuario/dashboard-app" target="_blank" class="btn btn-dark rounded-pill">
+                        <i class="fab fa-github me-2"></i> Código fuente
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           `,
     about: `
