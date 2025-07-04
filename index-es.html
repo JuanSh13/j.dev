@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arya Stark - Web & UI Designer</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: #f2f4f8;
+      }
+      .btn-language {
+        border: none !important;
+      }
+      .btn-language:active {
+        border: none !important;
+        outline: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-3 mb-5">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="assets/img/perfil.jpeg"
+            alt="Logo"
+            width="40"
+            class="me-2"
+          />
+          <strong style="font-size: 20px">J.Dev</strong>
+        </a>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Language Switcher Dropdown -->
+          <div class="dropdown m-0">
+            <button
+              class="btn rounded-pill dropdown-toggle px-3 btn-language"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              ES
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="index-en.html"> English </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="index-es.html"> Español </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Menu Items -->
+          <div class="bg-white rounded-pill px-4 py-2 d-none d-lg-block">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-4">
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" href="#" id="nav-home"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-muted" href="#" id="nav-about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-muted" href="#" id="nav-services"
+                  >SERVICES</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggle"
+          aria-controls="navbarToggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Sidebar -->
+        <div class="col-md-4">
+          <div
+            class="sidebar text-center mb-5"
+            style="border-radius: 30px; padding-top: 40px"
+          >
+            <img
+              src="assets/img/perfil.jpeg"
+              class="profile-pic mb-3"
+              alt="Arya Stark"
+              style="
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-top: -100px;
+              "
+            />
+            <h4 style="font-weight: 700; font-size: 1.5rem">
+              Juan Manuel Osorio
+            </h4>
+            <small class="text-white" style="letter-spacing: 1px"
+              >FULL-STACK WEB DEVELOPER AND UI DESIGNERS</small
+            >
+            <div class="d-flex justify-content-center gap-3 mt-4">
+              <a
+                href="#"
+                class="text-white bg-dark rounded-circle p-2"
+                style="width: 2.5rem"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="text-white bg-dark rounded-circle p-2"
+                style="width: 2.5rem"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="text-white bg-dark rounded-circle p-2"
+                style="width: 2.5rem"
+                ><i class="fab fa-x-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-white bg-dark rounded-circle p-2"
+                style="width: 2.5rem"
+                ><i class="fab fa-behance"></i
+              ></a>
+              <a
+                href="#"
+                class="text-white bg-dark rounded-circle p-2"
+                style="width: 2.5rem"
+                ><i class="fab fa-dribbble"></i
+              ></a>
+              <a
+                href="#"
+                class="text-white bg-dark rounded-circle p-2"
+                style="width: 2.5rem"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="sidebar text-center">
+            <div class="text-start mt-4">
+              <p><strong>PHONE:</strong><br />+(01) 5623 894 336</p>
+              <p><strong>EMAIL:</strong><br />hello@aryastark.com</p>
+              <p><strong>LOCATION:</strong><br />New York, USA</p>
+            </div>
+            <div class="text-center">
+              <button class="btn-hire mt-3">
+                Hire Me! <i class="fa fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Main Content -->
+        <div class="col-md-8">
+          <div id="main-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para navegación dinámica -->
+    <script src="navigation-bar.js"></script>
+  </body>
+</html>
