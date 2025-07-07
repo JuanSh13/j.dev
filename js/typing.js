@@ -1,4 +1,4 @@
-let show = document.getElementById("show-text");
+let show = document.getElementById("show");
 
 function animateText(text) {
   let index = 0;

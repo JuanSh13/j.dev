@@ -2,25 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const content = {
     home: `
       <div class="main-section mb-5">
-        <h1 id="show"></h1>
+        <h1 class="show"></h1>
         <p>Soy un desarrollador y diseñador Full-Stack creativo, reconocido por mi habilidad para transformar ideas en experiencias digitales impactantes. Mi pasión por el desarrollo y el diseño web me permite combinar estética y funcionalidad para crear soluciones visuales y tecnológicas que conectan con las personas.</p>
         <button class="btn btn-outline-dark rounded-pill download-btn mt-3">
           <i class="fa fa-download"></i> Descargar CV
         </button>
       </div>
-      
       <div class="row g-4" id="cardsContainer"></div>
     `,
     about: `
       <div class="main-section">
-        <h1 id="show"></h1>
-        <p>Hello! I’m Arya, a self-taught & award-winning Web Designer & UI Developer with over Seven years of experience. I started designing in my childhood room and became a pro working with renowned tech agencies.</p>
+        <h1 class="show"></h1>
+        <p>Hello! I’m Arya, a self-taught & award-winning Web Designer & UI Developer with over Seven years of experience. I started designing in my childhood room and became un profesional trabajando con agencias reconocidas.</p>
         <p>I love crafting intuitive and impactful digital experiences that connect with users around the world.</p>
       </div>
     `,
     services: `
       <div class="main-section">
-        <h1 id="show"></h1>
+        <h1 class="show"></h1>
         <ul>
           <li>✅ Web Design & Development</li>
           <li>✅ UI/UX Prototyping</li>
@@ -156,18 +155,19 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveNav(section);
 
     if (section === "home") {
-      animateText(
-        "Desarrollador Web & Diseñador IU.",
-        document.getElementById("show")
-      );
-      renderCards();
-    } else if (section === "about") {
-      animateText("About Me.", document.getElementById("show"));
-      renderCards();
-    } else if (section === "services") {
-      animateText("My Services.", document.getElementById("show"));
       renderCards();
     }
+
+    // Asegurar que el DOM ya tenga los elementos antes de animar
+    setTimeout(() => {
+      if (section === "home") {
+        animateText("Desarrollador Web & Diseñador IU.");
+      } else if (section === "about") {
+        animateText("About Me.");
+      } else if (section === "services") {
+        animateText("My Services.");
+      }
+    }, 0);
   }
 
   function updateActiveNav(section) {
@@ -180,19 +180,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function animateText(text, element) {
+  function animateText(text) {
+    const element = document.querySelector(".show");
     if (!element) return;
     let index = 0;
     const interval = setInterval(() => {
       element.innerHTML = text.substring(0, index + 1);
       index++;
-      if (index === text.length) clearInterval(interval);
+      if (index > text.length) clearInterval(interval);
     }, 50);
   }
 
   function renderCards() {
     const container = document.getElementById("cardsContainer");
     if (!container) return;
+
+    container.innerHTML = ""; // Limpiar tarjetas previas
 
     cardsInfo.forEach((project) => {
       const isGitHub = project.link.includes("github.com");
@@ -235,11 +238,12 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       `;
+
       container.innerHTML += card;
     });
   }
 
-  // Listeners nav
+  // Asignar eventos de navegación
   document
     .getElementById("nav-home")
     ?.addEventListener("click", () => loadSection("home"));
@@ -250,6 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("nav-services")
     ?.addEventListener("click", () => loadSection("services"));
 
-  // Load default
+  // Cargar sección inicial
   loadSection("home");
 });
